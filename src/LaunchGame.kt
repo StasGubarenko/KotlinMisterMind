@@ -60,16 +60,16 @@ fun compareTwoLetters(inputCoder: String?, inputCoderbreaker: String?, size: Int
 }
 
 fun matchingLetters(inputCoder: String?, inputCodebreaker: String?): Map<Int, Char> {
+    
     //Переменная, которая хранит символы, совпадающие по индексу
     val matchingLetters = mutableMapOf<Int, Char>()
 
     for (indexCoderLetters in inputCoder?.indices!!) {
         for (indexKit in inputCodebreaker?.indices!!) {
             //Сравниваем индексы
-            if (indexCoderLetters == indexKit) {
+            if (indexCoderLetters == indexKit) {   
                 //если индексы равны, то сравниваем символы
                 if (inputCoder[indexCoderLetters] == inputCodebreaker[indexKit]) {
-
                     //если символы равны, то записываем их в переменную, которая хранит одинаковые символы по индексу
                     matchingLetters[indexKit] = inputCodebreaker[indexKit]
                 }
